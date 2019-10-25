@@ -1,13 +1,15 @@
 package com.wiprodigital.webcrawler.model;
 
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-import java.util.List;
+import java.util.Set;
 
-@Value
+@Data
+@AllArgsConstructor
 public class WebPageInformation {
     private String url;
-    private List<WebPageInformation> domainLinks;
-    private List<String> externalLinks;
-    private List<String> staticContents;
+    private Set<String> domainLinks;
+    private Set<String> externalLinks;
+    private Set<String> staticContents;
 }
